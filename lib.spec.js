@@ -51,8 +51,20 @@ describe('validate', () => {
     expect(isValid).toBeTruthy()
   })
 
-  test.todo('should return false if provided fields dont exists in object')
-  test.todo('should return false if provided field is empty')
-  test.todo('should return false if provided object is empty')
+  test('should return false if provided fields dont exists in object', () => {
+    const isValid = sut.validate(objectStub, ['invalid', 'invalid.invalid'])
+    expect(isValid).toBeFalsy()
+  })
+
+  test('should return false if provided field is empty', () => {
+    const isValid = sut.validate(objectStub)
+    expect(isValid).toBeFalsy()
+  })
+
+  test('should return false if provided object is empty', () => {
+    const isValid = sut.validate({}, ['any'])
+    expect(isValid).toBeFalsy()
+  })
+
   test.todo('should calls validate with correctly params')
 })
