@@ -7,7 +7,12 @@
  * @param {object} object Accepts an object schema.
  * @param {string[]} fields Accepts string array. It is used to loop provided object and validate fields.
  */
-const validate = (object, fields = []) => {
+const validate = (object, fields) => {
+  const hasFields = fields && Array.isArray(fields) && fields.length > 0
+  const hasObject =
+    object && typeof object === 'object' && Object.keys(object).length > 0
+  if (!hasFields || !hasObject) return false
+
   return fields.every((field) => {
     const splitedFields = field.split('.')
     const [splicedField] = splitedFields.splice(0, 1)
