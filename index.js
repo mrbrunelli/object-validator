@@ -1,5 +1,3 @@
-const { validate } = require('./lib')
+const Validate = require('./lib')
 
-module.exports = {
-  validate
-}
+module.exports = Validate
