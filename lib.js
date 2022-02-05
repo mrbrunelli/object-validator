@@ -1,3 +1,12 @@
+/**
+ * @example
+ * const object = { foo: { bar: { message: 'Hello!' } } }
+ * const isValid = validate(object, ['foo', 'foo.bar.message'])
+ * console.log(isValid) // returns true
+ *
+ * @param {object} object Accepts an object schema.
+ * @param {string[]} fields Accepts string array. It is used to loop provided object and validate fields.
+ */
 const validate = (object, fields = []) => {
   return fields.every((field) => {
     const splitedFields = field.split('.')
