@@ -66,5 +66,14 @@ describe('validate', () => {
     expect(isValid).toBeFalsy()
   })
 
+  test('should return false if a unique field of provided fields not exists in object', () => {
+    const isValid = sut.validate(objectStub, [
+      'status',
+      'data.responseBody.total',
+      'invalid'
+    ])
+    expect(isValid).toBeFalsy()
+  })
+
   test.todo('should calls validate with correctly params')
 })
