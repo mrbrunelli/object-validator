@@ -1,4 +1,4 @@
-const { validate } = require('./index')
+const { validate } = require('./lib')
 
 const responseExample = {
   status: 200,
