@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand --verbose --passWithNoTests",
+    "test:watch": "yarn test --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/mrbrunelli/object-validator/issues"
   },
-  "homepage": "https://github.com/mrbrunelli/object-validator#readme"
+  "homepage": "https://github.com/mrbrunelli/object-validator#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.15",
+    "jest": "^27.4.7"
+  }
 }
