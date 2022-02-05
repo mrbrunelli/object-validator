@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --runInBand --verbose --passWithNoTests",
     "test:watch": "yarn test --watch",
-    "test:ci": "jest --runInBand --verbose",
+    "test:ci": "jest --runInBand --verbose --coverage",
     "prepare": "husky install"
   },
   "repository": {
