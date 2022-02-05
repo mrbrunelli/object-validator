@@ -2,7 +2,10 @@
 
 A Javascript object validator for tiny schemas.
 
+[![NPM](https://nodei.co/npm/@mrbrunelli/object-validator.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/@mrbrunelli/object-validator/)
+
 ![Test](https://github.com/mrbrunelli/object-validator/actions/workflows/test.yml/badge.svg)
+
 
 ## Get started
 ```sh
