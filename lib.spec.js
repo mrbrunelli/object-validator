@@ -50,4 +50,9 @@ describe('validate', () => {
     ])
     expect(isValid).toBeTruthy()
   })
+
+  test.todo('should return false if provided fields dont exists in object')
+  test.todo('should return false if provided field is empty')
+  test.todo('should return false if provided object is empty')
+  test.todo('should calls validate with correctly params')
 })
