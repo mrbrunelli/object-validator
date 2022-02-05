@@ -41,4 +41,13 @@ describe('validate', () => {
     ])
     expect(isValid).toBeTruthy()
   })
+
+  test('should return true if repeated fields is provided to math with object', () => {
+    const isValid = sut.validate(objectStub, [
+      'data.status',
+      'data.status',
+      'data.status'
+    ])
+    expect(isValid).toBeTruthy()
+  })
 })
