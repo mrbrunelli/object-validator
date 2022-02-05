@@ -21,6 +21,9 @@
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.15",
-    "jest": "^27.4.7"
+    "eslint": "^8.8.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1"
   }
 }
