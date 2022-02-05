@@ -1,5 +1,5 @@
 {
-  "name": "object-validator",
+  "name": "@mrbrunelli/object-validator",
   "version": "1.0.0",
   "description": "A simple object validator for tiny schemas",
   "main": "index.js",
