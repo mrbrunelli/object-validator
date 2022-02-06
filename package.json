@@ -1,11 +1,11 @@
 {
   "name": "@mrbrunelli/object-validator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple object validator for tiny schemas",
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand --verbose --passWithNoTests",
-    "test:watch": "yarn test --watch",
+    "tdd": "yarn test --watch",
     "test:ci": "jest --runInBand --verbose --coverage",
     "prepare": "husky install"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/mrbrunelli/object-validator.git"
   },
   "keywords": ["validator", "schema", "object-validator", "schema-validator"],
-  "author": "",
+  "author": "Matheus R. Brunelli <matheus.brunelli@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mrbrunelli/object-validator/issues"
