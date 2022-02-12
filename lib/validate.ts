@@ -2,10 +2,7 @@ import { IValidate, IObject, IFields } from './validate.types'
 
 export default class Validate implements IValidate {
   isValid(object: IObject, fields: IFields): boolean {
-    const hasFields = fields && Array.isArray(fields) && fields.length > 0
-    const hasObject =
-      object && typeof object === 'object' && Object.keys(object).length > 0
-    if (!hasFields || !hasObject) return false
+    if (!this.isValidProps(object, fields)) return false
 
     return fields.every(([field, value]) => {
       const splitedFields = field.split('.')
@@ -25,5 +22,12 @@ export default class Validate implements IValidate {
 
       return existsFieldInObject && !existsMoreFields
     })
+  }
+
+  private isValidProps(object: IObject, fields: IFields) {
+    const hasFields = fields && Array.isArray(fields) && fields.length > 0
+    const hasObject =
+      object && typeof object === 'object' && Object.keys(object).length > 0
+    return hasObject && hasFields
   }
 }
