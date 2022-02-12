@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/mrbrunelli/object-validator.git"
   },
-  "keywords": ["validator", "schema", "object-validator", "schema-validator"],
+  "keywords": [
+    "validator",
+    "schema",
+    "object-validator",
+    "schema-validator"
+  ],
   "author": "Matheus R. Brunelli <matheus.brunelli@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -28,6 +33,8 @@
     "git-commit-msg-linter": "^4.0.7",
     "husky": "^7.0.0",
     "jest": "^27.4.7",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
   }
 }
