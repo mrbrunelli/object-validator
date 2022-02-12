@@ -1,4 +1,5 @@
-const Validate = require('./validate')
+import Validate from './validate'
+import { IValidate } from './validate.types'
 
 const makeObjectStub = () => {
   return {
@@ -21,14 +22,11 @@ const makeObjectStub = () => {
   }
 }
 
-const makeSut = () => Validate
+const makeSut = () => new Validate()
 
 describe('validate', () => {
-  /**
-   * @type {Validate}
-   */
-  let sut
-  let objectStub
+  let sut: IValidate
+  let objectStub: object
 
   beforeEach(() => {
     sut = makeSut()
@@ -59,7 +57,7 @@ describe('validate', () => {
   })
 
   test('should return false if provided field is empty', () => {
-    const isValid = sut.isValid(objectStub)
+    const isValid = sut.isValid(objectStub, [])
     expect(isValid).toBeFalsy()
   })
 

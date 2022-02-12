@@ -1,19 +1,7 @@
-class Validate {
-  /**
-   * @example
-   * const object = { foo: { bar: { message: 'Hello!' } } }
-   * const isValid = Validate.isValid(object, [['foo'], ['foo.bar.message']])
-   * console.log(isValid) // returns true
-   *
-   * @example
-   * const object = { foo: { bar: { message: 'Hello!' } } }
-   * const isValid = Validate.isValid(object, [['foo.bar.message', 'Wrong!']])
-   * console.log(isValid) // returns false
-   *
-   * @param {object} object Accepts an object schema.
-   * @param {string[]} fields Accepts string array. It is used to loop provided object and validate fields.
-   */
-  static isValid(object, fields) {
+import { IValidate, IObject, IFields } from './validate.types'
+
+export default class Validate implements IValidate {
+  isValid(object: IObject, fields: IFields): boolean {
     const hasFields = fields && Array.isArray(fields) && fields.length > 0
     const hasObject =
       object && typeof object === 'object' && Object.keys(object).length > 0
@@ -29,7 +17,7 @@ class Validate {
       const existsFieldInObject = splicedField in object
 
       if (existsFieldInObject && existsMoreFields) {
-        return Validate.isValid(object[splicedField], [[joinedFields, value]])
+        return this.isValid(object[splicedField], [[joinedFields, value]])
       }
 
       const isNecessaryToCompareValues = !existsMoreFields && existsValue
@@ -39,5 +27,3 @@ class Validate {
     })
   }
 }
-
-module.exports = Validate
