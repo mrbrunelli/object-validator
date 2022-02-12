@@ -2,11 +2,13 @@
   "name": "@mrbrunelli/object-validator",
   "version": "2.0.1",
   "description": "A simple object validator for tiny schemas",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "jest --runInBand --verbose --passWithNoTests",
     "tdd": "yarn test --watch",
     "test:ci": "jest --runInBand --verbose --coverage",
+    "build": "tsc",
+    "prepublishOnly": "yarn build",
     "prepare": "husky install"
   },
   "repository": {
