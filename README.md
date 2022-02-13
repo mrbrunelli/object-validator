@@ -15,7 +15,7 @@ A Javascript object validator for tiny schemas.
 #### How to use
 
 ```js
-const Validate = require('@mrbrunelli/object-validator')
+const Validate = require('@mrbrunelli/object-validator').default
 
 const objectExample = {
   foo: {
