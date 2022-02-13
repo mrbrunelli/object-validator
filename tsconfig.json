@@ -1,0 +1,16 @@
+{
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["*.ts"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "target": "es2016",
+    "module": "commonjs",
+    "outDir": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
