@@ -14,8 +14,8 @@ A Javascript object validator for tiny schemas.
 
 #### How to use
 
-```js
-const Validate = require('@mrbrunelli/object-validator').default
+```ts
+import Validate from '@mrbrunelli/object-validator'
 
 const objectExample = {
   foo: {
