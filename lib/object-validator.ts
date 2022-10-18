@@ -1,7 +1,7 @@
-import { IValidate, IObject, IFields } from './validate.types'
+import { Fields, Payload, Validator } from './object-validator.types'
 
-export default class Validate implements IValidate {
-  isValid(object: IObject, fields: IFields): boolean {
+export class ObjectValidator implements Validator {
+  isValid(object: Payload, fields: Fields): boolean {
     if (!this.isValidProps(object, fields)) return false
 
     return fields.every(([field, value]) => {
@@ -24,7 +24,7 @@ export default class Validate implements IValidate {
     })
   }
 
-  private isValidProps(object: IObject, fields: IFields) {
+  private isValidProps(object: Payload, fields: Fields) {
     const hasFields = fields && Array.isArray(fields) && fields.length > 0
     const hasObject =
       object && typeof object === 'object' && Object.keys(object).length > 0
