@@ -1,17 +1,20 @@
 {
   "name": "@mrbrunelli/object-validator",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A simple object validator for tiny schemas",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["/dist"],
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test": "jest --runInBand --verbose --passWithNoTests",
     "tdd": "yarn test --watch",
     "test:ci": "jest --runInBand --verbose --coverage",
     "build": "tsc",
     "prepublishOnly": "yarn build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bump:patch": "npm version patch"
   },
   "repository": {
     "type": "git",

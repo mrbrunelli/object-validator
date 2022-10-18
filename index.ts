@@ -1,3 +1,3 @@
-import Validate from './lib/validate'
+import { ObjectValidator } from './lib/object-validator'
 
-export default new Validate()
+export default new ObjectValidator()
